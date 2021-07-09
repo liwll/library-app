@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 <body>
-    <h1>Your Books</h1>
+    <h1>Your Library</h1>
     <div class="modal">
         <div class="modal-content">
             <div>New Book</div>
             <form>
-                <div>Title: <input type=text></div>
-                <div>Author: <input type=text></div>
-                <div>Pages: <input type=number></div>
+                <div>Title: <input name="title" type="text"></div>
+                <div>Author: <input name="author" type="text"></div>
+                <div>Pages: <input name="pages" type="number"></div>
+                <div>Completed: <input name="isRead" type="checkbox"></div>
             </form>
-            <div class="close-modal">Close</div>
+            <div class="submit">Add</div>
+            <div class="close-modal">Cancel</div>
         </div>
     </div>
     <div class="books">
-        <button class="add-book">+</button>
+        <button class="new-book">+</button>
         <div class="book"></div>
     </div>
     <script src="script.js"></script>

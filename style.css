@@ -1,12 +1,12 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background: linear-gradient(#ffb7cd, #9198e5);
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
 }
 
-.add-book { 
+.new-book { 
     background-color: white;
     border: 0px;
     border-radius: 5px;
@@ -26,10 +26,10 @@ body {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 25% auto;
+    margin: 150px auto;
     padding: 20px;
     border-radius: 20px;
-    width: 50%;
+    width: 20%;
   }
 
 form {
@@ -39,12 +39,14 @@ form {
 }
 
 input {
+    font-family: 'Quicksand', sans-serif;
     border: 1px solid gray;
     border-radius: 10px;
     margin: 5px;
 }
 
-.close-modal {
+.submit ,.close-modal {
+    margin: 10px;
     cursor: pointer;
     background-color: lightgray;
     border-radius: 10px;
