@@ -4,8 +4,7 @@ function Book(title, author, pages, isRead) {
     this.pages = pages;
     this.isRead = isRead;
     this.info = () => {
-        let info = `${this.title} by ${this.author}, ${pages} pages, `;
-        info += isRead? "have read" : "not read yet";
+        let info = `${this.title} by ${this.author}, ${pages} pages`;
         return info;
     }
 }
@@ -90,6 +89,17 @@ function addBookToLibrary() {
     bookInfo.textContent = book.info();
     bookInfo.dataset.index = bookIndex;
 
+    //allows toggling of "read" status
+    const toggleRead = document.createElement('button');
+    toggleRead.classList.add('btn-tgl-read');
+    toggleRead.textContent = "Not Completed";
+    toggleRead.addEventListener('click', () => {
+        toggleRead.textContent = toggleRead.textContent === "Completed"
+            ? "Not Completed" : "Completed";
+    });
+    bookInfo.appendChild(toggleRead);
+
+    //allows removal of books
     const removeBtn = document.createElement('button');
     removeBtn.classList.add('btn-remove');
     removeBtn.textContent = 'x';

@@ -6,8 +6,9 @@ body {
     margin-top: 60px;
 }
 
-.new-book, .btn-remove { 
-    margin: 10px;
+.new-book, .btn-tgl-read, .btn-remove {
+    font-family: 'Quicksand', sans-serif;
+    margin: 5px;
     background-color: white;
     border: 0px;
     border-radius: 5px;
