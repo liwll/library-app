@@ -15,6 +15,7 @@ let bookIndex = -1;
 
 const modal = document.querySelector('.modal');
 const form = document.querySelector('form');
+const books = document.querySelector('.books');
 
 const newBook = document.querySelector('.new-book');
 newBook.onclick = () => {
@@ -69,9 +70,16 @@ function clearFormData() {
     modal.style.display = 'none';
 }
 
-function addBookToLibrary() {
-    const books = document.querySelector('.books');
+function removeBook(index) {
+    const target = document.querySelectorAll(`[data-index='${index}']`);
+    if (index > -1) {
+        myLibrary.splice(index, 1);
+    }
+    bookIndex--;
+    books.removeChild(target[0]);
+}
 
+function addBookToLibrary() {
     let book = new Book(form.title.value, form.author.value, form.pages.value, form.isRead.checked);
     myLibrary.push(book);
     bookIndex++;
@@ -80,5 +88,15 @@ function addBookToLibrary() {
     const bookInfo = document.createElement('div');
     bookInfo.classList.add('book');
     bookInfo.textContent = book.info();
+    bookInfo.dataset.index = bookIndex;
+
+    const removeBtn = document.createElement('button');
+    removeBtn.classList.add('btn-remove');
+    removeBtn.textContent = 'x';
+    removeBtn.addEventListener('click', () => {
+        removeBook(bookInfo.dataset.index);
+    });
+    bookInfo.appendChild(removeBtn);
+
     books.appendChild(bookInfo);
 }

@@ -6,7 +6,8 @@ body {
     margin-top: 60px;
 }
 
-.new-book { 
+.new-book, .btn-remove { 
+    margin: 10px;
     background-color: white;
     border: 0px;
     border-radius: 5px;
