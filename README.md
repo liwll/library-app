@@ -1,4 +1,5 @@
 # library-app
 Todo:
-- Check input on form, if fields are empty display error message.
-- Display books once they have been added.
+- Improve book display.
+- Prevent negative page numbers from being entered.
+- Allow users to remove books.

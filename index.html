@@ -13,8 +13,11 @@
             <div>New Book</div>
             <form>
                 <div>Title: <input name="title" type="text"></div>
+                <div class="err-title">Please enter a title.</div>
                 <div>Author: <input name="author" type="text"></div>
-                <div>Pages: <input name="pages" type="number"></div>
+                <div class="err-author">Please enter an author.</div>
+                <div>Pages: <input name="pages" type="number" min="1"></div>
+                <div class="err-pages">Please enter the number of pages.</div>
                 <div>Completed: <input name="isRead" type="checkbox"></div>
             </form>
             <div class="submit">Add</div>
@@ -23,7 +26,6 @@
     </div>
     <div class="books">
         <button class="new-book">+</button>
-        <div class="book"></div>
     </div>
     <script src="script.js"></script>
 </body>
